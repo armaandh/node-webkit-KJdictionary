@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result</title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+
+
+
+		<form class="yosemite-search" action="" method="get">
+  <input type="text" name="word" id="y-search" required="required" placeholder="Search"/>
+  <label class="ring" for="y-search">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+      <path d="M10 1q1.828 0 3.496 0.715t2.871 1.918 1.918 2.871 0.715 3.496q0 1.57-0.512 3.008t-1.457 2.609l5.68 5.672q0.289 0.289 0.289 0.711 0 0.43-0.285 0.715t-0.715 0.285q-0.422 0-0.711-0.289l-5.672-5.68q-1.172 0.945-2.609 1.457t-3.008 0.512q-1.828 0-3.496-0.715t-2.871-1.918-1.918-2.871-0.715-3.496 0.715-3.496 1.918-2.871 2.871-1.918 3.496-0.715zM10 3q-1.422 0-2.719 0.555t-2.234 1.492-1.492 2.234-0.555 2.719 0.555 2.719 1.492 2.234 2.234 1.492 2.719 0.555 2.719-0.555 2.234-1.492 1.492-2.234 0.555-2.719-0.555-2.719-1.492-2.234-2.234-1.492-2.719-0.555z"></path>
+    </svg>
+  </label>
+  <button class="clear" type="submit" value="Search">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+      <path d="M19 4q0.43 0 0.715 0.285t0.285 0.715q0 0.422-0.289 0.711l-6.297 6.289 6.297 6.289q0.289 0.289 0.289 0.711 0 0.43-0.285 0.715t-0.715 0.285q-0.422 0-0.711-0.289l-6.289-6.297-6.289 6.297q-0.289 0.289-0.711 0.289-0.43 0-0.715-0.285t-0.285-0.715q0-0.422 0.289-0.711l6.297-6.289-6.297-6.289q-0.289-0.289-0.289-0.711 0-0.43 0.285-0.715t0.715-0.285q0.422 0 0.711 0.289l6.289 6.297 6.289-6.297q0.289-0.289 0.711-0.289z"></path>
+    </svg>
+  </button>
+</form>
+
+
+
+<div class="tabbing">
+  <label>
+    <input type="radio" name="menu-tab" id="tab-1" value="tab-1" class="display-none" data_tab_number="1" checked>
+    <div class="tab" id="daum">Daum</div>
+  </label>
+
+  <label>
+    <input type="radio" name="menu-tab" id="tab-2" value="tab-2" class="display-none" data_tab_number="2">
+    <div class="tab" id="weblio">Weblio</div>
+  </label>
+
+  <ol>
+    <li class="tab-item">
+      <div class="tab-background">
+      <div class="tab-text">
+        <div class="title">
+					<table id="miyazaki">
+			<thead>
+			<tr>
+				<th>English</th>
+				<th>Korean</th>
+			</tr>
+			<tbody>
+				<% for(var i=0; i<kor_e_arr.length; i++){ %>
+			<tr>
+					<td><%= eng_k_arr[i] %></td>
+					<td><%= kor_e_arr[i] %></td>
+			</tr>
+			<% } %>
+				<% eng_k_arr = [];  kor_e_arr = []; %>
+			</table>
+        </div>
+      </div>
+    </li>
+    <li class="tab-item">
+      <div class="tab-background">
+      </div>
+      <div class="tab-text">
+        <div class="title">
+					<table id="miyazaki">
+			<thead>
+
+			<tr>
+				<th>English</th>
+				<th>Japanese</th>
+			</tr>
+			<tbody>
+				<% for(var i=0; i<jpn_e_arr.length; i++){ %>
+			<tr>
+					<td><%= eng_j_arr[i] %></td>
+					<td><%= jpn_e_arr[i] %></td>
+			</tr>
+			<% } %>
+
+			</table>
+        </div>
+
+      </div>
+    </li>
+  </ol>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+  </body>
+</html>
