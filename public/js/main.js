@@ -4,6 +4,12 @@
     var input = $(this);
 
     var tabNumber = input.attr("data_tab_number");
+		var inVal = input.attr("value");
+		console.log("Tabnum is"+ tabNumber);
+		console.log("Value is"+ inVal);
+
+
+
 
     var tabBackground = '.tab-item:nth-child(' + tabNumber + ') > .tab-background';
 
@@ -22,6 +28,12 @@
     var reverseTranslate = 'translateX(-100%)';
 
     var notTranslate = 'translateX(0px)';
+
+
+
+
+
+
 
     $(tabBackground).css({
       'z-index':'1',
@@ -62,5 +74,7 @@
       '-webkit-transform':reverseTranslate
       });
   });
+
+	$('.button_input').click(function(){$('input[type=checkbox]').each(function(){if(this.checked == true){console.log(this.value)}})});
 
 })();

@@ -97,15 +97,6 @@ body {
   list-style: none;
   padding: 0;
 }
-.tabbing .tab-item {
-  position: absolute;
-  top: 50px;
-  min-width: 100%;
-}
-.tabbing .tab-item > div {
-  transition: all 0.6s;
-  -webkit-transition: all 0.6s;
-}
 .tabbing .tab-item:nth-child(1) > div {
   z-index: 1;
   opacity: 1;
